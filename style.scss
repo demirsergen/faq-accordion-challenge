@@ -28,5 +28,105 @@ $light-grayish-blue: hsl(240, 5%, 91%);
 body {
     font-size: 12px;
     font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient($soft-violet, $soft-blue);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
+
+.faq {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 3em;
+    border: 1px solid #ccc;
+    overflow: visible;
+
+
+    // FIX HERE!!!!!!!!
+    
+    .image {
+        width: 50%;
+        background-image: url(/images/bg-pattern-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position-x: -30px;
+        background-position-y: 50px;
+
+
+        .relative-image {
+            position: relative;
+            right: 100px;
+            z-index: 0;
+        }
+
+        .absolute-image {
+            position: absolute;
+            bottom: 240px;
+            left: 100px;
+            z-index: 1;
+        }
+    }
+
+    .questions {
+
+        width: 50%;
+
+        .faq-title {
+            font-size: 30px;
+            color: $very-dark-desaturated-blue;
+        }
+
+        details {
+            border-bottom: 1px solid $light-grayish-blue;
+
+            .question {
+                padding: 1em;
+                cursor: pointer;
+                color: $very-dark-grayish-blue;
+                font-size: 14px;
+
+                &:hover {
+                    color: $soft-red;
+                }
+            }
+
+            .answer {
+                margin: 1em 0;
+                line-height: 1.5em;
+                color: $dark-grayish-blue;
+            }
+        }
+
+        .faq-title {
+            margin-bottom: 1em;
+        } 
+    }
+}
+
+
+
+
+
+
+
+
+
+    .attribution { 
+     font-size: 13px; 
+     text-align: center; 
+     margin-top: 1em;
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
 
